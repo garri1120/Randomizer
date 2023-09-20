@@ -16,7 +16,7 @@ public class ReadFileImpl implements ReadFile{
     @Override
     public FileReader returnFileForReading() throws IOException {
         FileReader fileReader = null;
-        System.out.println("Введите полный путь к файлу students.txt" + "\n" + "Название файла в конце пути добавлять не нужно.");
+        System.out.println("Введите полный путь к файлу students.txt" + "\n" + "Название файла в конце пути нужно добавить.");
         while (fileReader == null){
             try {
                 fileReader = getFileReader(scanner);
@@ -28,6 +28,7 @@ public class ReadFileImpl implements ReadFile{
         return fileReader;
     }
     static FileReader getFileReader(Scanner scanner) throws IOException {
-        return new FileReader(scanner.nextLine() + "\\students.txt", StandardCharsets.UTF_8);
+        return new FileReader(scanner.nextLine(), StandardCharsets.UTF_8);
     }
 }
+
