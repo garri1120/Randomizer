@@ -16,7 +16,7 @@ public class ReadFileImpl implements ReadFile{
     @Override
     public FileReader returnFileForReading() throws IOException {
         FileReader fileReader = null;
-        System.out.println("Введите путь к файлу students.txt");
+        System.out.println("Введите полный путь к файлу students.txt" + "\n" + "Название файла в конце пути добавлять не нужно.");
         while (fileReader == null){
             try {
                 fileReader = getFileReader(scanner);
